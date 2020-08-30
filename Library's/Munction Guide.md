@@ -72,3 +72,51 @@ void showstack( stack < int > s ) {
 ```
 
 reference: http://www.cplusplus.com/reference/stack/stack/
+
+## stack
+queues are a type of container adaptor, specifically designed to operate in a FIFO context (first-in first-out), where elements are inserted into one end of the container and extracted from the other.
+```cpp
+#include <bits/stdc++.h>
+
+using namespace std;
+
+void showQueue( queue < int > copy ){
+
+  while( !copy.empty(  ) ){
+
+    cout << copy.front(  ) << ' ';
+
+    copy.pop(  );
+
+  }
+
+  cout << '\n';
+
+}
+
+int main() {
+
+  queue < int > values;
+
+  values.push( 1 );
+  values.push( 2 );
+  values.push( 3 );
+  values.push( 4 );
+  values.push( 5 );
+  
+  showQueue( values );
+
+  cout << values.size(  ) << '\n';
+
+  cout << values.front(  ) << '\n';
+
+  cout << values.back(  ) << '\n';
+
+  values.pop(  );
+
+  showQueue( values );
+  
+  return 0;
+
+}
+```
